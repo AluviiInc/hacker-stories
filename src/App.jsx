@@ -23,6 +23,7 @@ function App() {
   return (
     <div>
       <h1>{title}</h1>
+
       <Search />
       <List />
       <hr />
@@ -45,10 +46,15 @@ function List() {
 }
 
 function Search() {
+const handleChange = (event) => {
+  console.log(event);
+  // console.log(event.target.value)
+}
+
   return (
     <>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text"></input>
+      <input id="search" type="text" onChange={ handleChange }></input>
     </>
   );
 }
